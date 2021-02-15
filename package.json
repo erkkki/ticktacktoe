@@ -1,6 +1,11 @@
 {
   "name": "ticktacktoe",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "keywords": [
+    "angular",
+    "nodejs",
+    "websocket"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng server",
