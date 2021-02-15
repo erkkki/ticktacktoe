@@ -1,0 +1,37 @@
+#chat {
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  min-width: 300px;
+  border: 1px solid red;
+}
+
+#input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+#input input {
+  width: 69%;
+  border: 1px solid blue;
+}
+#input button {
+  width: 28%;
+  border: 1px solid blue;
+}
+
+#username {
+  white-space: nowrap;
+  width: 60px;
+  min-width: 60px;
+  overflow: hidden;
+  text-overflow: "----";
+}
+
+.message {
+  display: inline-flex;
+  width: 100%;
+  border-bottom: 1px solid red;
+}

@@ -1,0 +1,14 @@
+<ng-container *ngIf="show">
+  <div class="modal">
+    <div class="content">
+
+      <span class="close">&times;</span>
+      <h2>Select username</h2>
+        <form>
+          Username:<input [(ngModel)]="username" type="text" name="username">
+          <button (click)="save()">Save</button>
+        </form>
+    </div>
+  </div>
+</ng-container>
+

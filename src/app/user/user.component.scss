@@ -1,0 +1,15 @@
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  border: solid red;
+  padding-bottom: 10px;
+  border-width: 0 0 2px 0;
+}
+input {
+  width: 100%;
+}
+.end {
+  align-self: end;
+}

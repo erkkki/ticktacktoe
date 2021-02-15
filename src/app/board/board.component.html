@@ -1,0 +1,22 @@
+<div class="container">
+  <div id="board">
+    <ul *ngFor="let index of [0,1,2]">
+      <li>
+        <button (click)="play(index, 0)">
+          {{(board.board[index][0] !== '')? board.board[index][0]: '_'}}
+        </button>
+      </li>
+      <li>
+        <button (click)="play(index, 1)">
+          {{(board.board[index][1] !== '')? board.board[index][1]: '_'}}
+        </button>
+      </li>
+      <li>
+        <button (click)="play(index, 2)">
+          {{(board.board[index][2] !== '')? board.board[index][2]: '_'}}
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+

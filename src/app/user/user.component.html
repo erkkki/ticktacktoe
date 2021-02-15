@@ -1,0 +1,31 @@
+<div class="container" *ngIf="(user$ | async ) as user">
+
+  <button (click)="editUsername = !editUsername; save(user.username)">
+    {{editUsername? 'Save username:': 'Change username:'}}
+  </button>
+
+
+  <div style="width: 60%">
+    <div *ngIf="!editUsername">
+      <b>
+        {{user.username}}
+      </b>
+    </div>
+
+    <div *ngIf="editUsername">
+      <form (ngSubmit)="editUsername = !editUsername; save(user.username)">
+        <input [(ngModel)]="user.username" type="text" name="user">
+      </form>
+    </div>
+
+  </div>
+
+  <div class="end">
+    <span>Users online: <span style="color: red"><b>{{userCount$ | async}}</b></span></span>
+  </div>
+</div>
+
+
+
+
+

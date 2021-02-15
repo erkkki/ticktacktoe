@@ -1,0 +1,31 @@
+<div class="container">
+  <div id="actions">
+    <section *ngIf="!(game$ | async)">
+      <button (click)="create()">New Game</button>
+    </section>
+
+    <section *ngIf="game$ | async">
+      <div *ngIf="(game$ | async)?.winner as winner">
+        <button (click)="create()">New Game</button>
+        <span>Winner: {{winner.username}}</span>
+      </div>
+
+      <div *ngIf="!(game$ | async)?.winner">
+        <div *ngIf="(game$ | async)?.turn.id === (user$ | async)?.id else enemy">
+          <p>It's your turn do something...</p>
+        </div>
+      </div>
+      <ng-template #enemy>
+        <p>Your evil enemy is thinking how to destroy you.</p>
+      </ng-template>
+    </section>
+  </div>
+
+
+  <section *ngIf="(game$ | async) as game">
+    <app-board [board]="game.board"></app-board>
+  </section>
+</div>
+
+
+

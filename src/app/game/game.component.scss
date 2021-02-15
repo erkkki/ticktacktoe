@@ -1,0 +1,14 @@
+.container {
+  width: 70%;
+}
+
+#actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+}
+
+#actions span{
+  margin-left: 20px;
+}

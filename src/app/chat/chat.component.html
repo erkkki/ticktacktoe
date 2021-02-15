@@ -1,0 +1,17 @@
+<section id="chat">
+
+  <div id="history">
+    <div *ngFor="let msg of messages">
+      <div class="message">
+        <div id="username">{{msg.username}} :</div>
+        <div>{{msg.msg}}</div>
+      </div>
+    </div>
+  </div>
+  <div id="input">
+    <form (submit)="send()">
+      <input [(ngModel)]="message" type="text" name="message">
+      <button>Send</button>
+    </form>
+  </div>
+</section>

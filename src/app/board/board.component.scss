@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+}
+
+#board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+#board button {
+  font-size: 36px;
+  width: 48px;
+  height: 48px;
+}
+
+ul {
+  text-align: center;
+  margin: 0;
+}
+
+li {
+  display:inline;
+}
